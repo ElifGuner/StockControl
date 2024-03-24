@@ -1,0 +1,45 @@
+
+<form class="row g-3" [formGroup] ="frm">
+    <div class="col-md-6">
+      <label for="ProductName" class="form-label">Product Name</label> 
+      <input type="text" class="form-control" id="ProductName" formControlName="productName">
+      <br>
+      <label for="CategoryName" class="form-label">Category Name</label>
+      <input type="text" class="form-control" id="CategoryName" formControlName="categoryName">
+    <!--</div>-->
+    <br>
+    <!--<div class="col-md-4">-->
+        <label for="WarehouseName" class="form-label">Warehouse Name</label>
+        <select id="WarehouseName" class="form-select" formControlName="selectedValueWarehouseName">
+          <option selected>Choose...</option>
+          <option value="Ankara">Ankara</option>
+          <option value="İstanbul">İstanbul</option>
+          <option value="İzmir">İzmir</option>
+        </select>
+        <!--
+        <select formControlName="selectedValueWarehouseName" (change)="onSelect($event)" >
+            <option *ngFor="let city of Cities" [value]="city.value">{{ city.label }}</option>
+        </select><br>
+        -->
+        <br>
+        <label for="Count" class="form-label">Count</label>
+        <input type="text" class="form-control" id="Count" formControlName="count">
+
+        <label for="Price" class="form-label">Price</label>
+        <input type="text" class="form-control" id="Price" formControlName="price">
+        
+     </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" style="padding: 5px 10px; font-size: 16px;" (click)="onRetrieve()">Retrieve</button>
+      <button type="submit" class="btn btn-primary" style="padding: 5px 18px; font-size: 16px;" (click)="onInsert()">Insert</button> <br>
+      <button type="submit" class="btn btn-primary" style="padding: 5px 12px; font-size: 16px;" (click)="onUpdate()">Update</button> 
+      <button type="submit" class="btn btn-primary" style="padding: 5px 10px; font-size: 16px;" (click)="onDelete()">Remove</button> <br>
+      <!--
+      <button style="padding: 5px 10px; font-size: 16px;" (click)="onRetrieve()">Retrieve</button>
+      <button style="padding: 5px 18px; font-size: 16px;" (click)="onInsert()">Insert</button> <br>
+      <button style="padding: 5px 12px; font-size: 16px;" (click)="onUpdate()">Update</button>
+      <button style="padding: 5px 10px; font-size: 16px;" (click)="onDelete()">Remove</button>
+      -->
+    </div>
+  </form>
